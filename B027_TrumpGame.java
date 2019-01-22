@@ -8,7 +8,7 @@ public class B027_TrumpGame {
         Scanner sc = new Scanner(System.in);
         //トランプの縦・横の段数とプレイヤーの数を入力
  		String[] HWN = sc.nextLine().split(" ");
-        int H = Integer.parseInt(HWN[0]);
+		int H = Integer.parseInt(HWN[0]);
 		int W = Integer.parseInt(HWN[1]);
 		int N = Integer.parseInt(HWN[2]);
 
