@@ -1,5 +1,6 @@
 package paiza;
 
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -14,8 +15,7 @@ public class C_x001 {
 	public static void main(String[] args) {
 
 		//判定文字列
-		//String str = new Scanner(System.in).nextLine();
-		String str = "DjZGrduN8Mj4";
+		String str = new Scanner(System.in).nextLine();
 		//全ての条件に合致したかの判定結果
 		System.out.println(judge(str));
 	}
