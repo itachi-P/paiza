@@ -2,6 +2,14 @@ package paiza;
 
 import java.util.Scanner;
 //総当たり戦の対戦成績と優勝チームのデータ表示
+/* 入力例：チーム数→総当たり戦績表(Win2点, Draw1点, Lose0点)
+3
+-DW
+D-D
+LD-
+結果：優勝チーム 得点 勝ち数 引き分け数 負け数
+1 3 1 1 0
+*/
 public class B_x001 {
 
 	public static void main(String[] args) {

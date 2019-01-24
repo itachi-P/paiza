@@ -15,6 +15,7 @@ public class C_x001 {
 	public static void main(String[] args) {
 
 		//判定文字列
+		//入力例：7Caaad9 -> "Invalid", DjZGrduN8Mj4 -> "Valid"
 		String str = new Scanner(System.in).nextLine();
 		//全ての条件に合致したかの判定結果
 		System.out.println(judge(str));
@@ -24,8 +25,6 @@ public class C_x001 {
 	public static String judge(String str) {
 		//与えられた文字列が全ての条件をクリアしていれば"Valid"を返す
 		String result = "Invalid";
-//3段階の文字列条件チェックの通過有無フラグ
-//int progress = 0;
 
 /*条件０.6文字以上かチェック(条件２の正規表現チェックで同時に可能)
 		if (str.length() < 6) {
@@ -38,10 +37,7 @@ public class C_x001 {
 		String pattern = "^[a-zA-Z0-9]+$";
 		Pattern p = Pattern.compile(pattern);
 		Matcher m = p.matcher(str);
-		if (m.find()) {
-//第一チェック通過フラグを有効に
-//progress = 1;
-		} else {
+		if (!m.find()) {
 			return result; //"Invalid" ※最下部の記述と重複処理1
 		}
 
@@ -49,10 +45,7 @@ public class C_x001 {
 		pattern = "^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}";
 		p = Pattern.compile(pattern);
 		m = p.matcher(str);
-		if (m.find()) {
-//第二チェック通過フラグを有効に
-//progress = 2;
-		} else {
+		if (!m.find()) {
 			return result; //"Invalid" ※最下部の記述と重複処理2
 		}
 
