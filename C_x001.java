@@ -31,14 +31,13 @@ public class C_x001 {
 			return "Invalid";
 		}
 */
-
 		//条件１．全て半角英数字のみで構成された文字列か
 		// 正規表現のパターン１を作成
 		String pattern = "^[a-zA-Z0-9]+$";
 		Pattern p = Pattern.compile(pattern);
 		Matcher m = p.matcher(str);
 		if (!m.find()) {
-			return result; //"Invalid" ※最下部の記述と重複処理1
+			return result; //"Invalid"
 		}
 
 		//条件２.英字と数字の両方を含む６文字以上か
@@ -46,7 +45,7 @@ public class C_x001 {
 		p = Pattern.compile(pattern);
 		m = p.matcher(str);
 		if (!m.find()) {
-			return result; //"Invalid" ※最下部の記述と重複処理2
+			return result; //"Invalid"
 		}
 
 		//条件３．同じ文字が３回以上連続使用されていないか
@@ -57,7 +56,7 @@ public class C_x001 {
 			//ここは正規表現マッチ「しない」が条件クリアなので注意
 			result = "Valid";
 		} else {
-			return result; //"Invalid" ※最下部の記述と重複処理3
+			return result; //"Invalid"
 		}
 		return result;
 	}

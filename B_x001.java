@@ -59,18 +59,20 @@ public class B_x001 {
 							winner = i;
 						}
 					} else {
-						//"L"及びその他の入力ミス時の処理は想定しない
+						//"L" 及びその他の入力ミス時の処理は想定しない
 					}
 				}
 			}
 		}
 
-		String result = winnerRecord(winner, maxScore, records);
-
-		System.out.println(result);
+//		String result = winnerRecord(winner, maxScore, records);
+//		System.out.println(result);
+		winnerRecord(winner, maxScore, records);
 	}
 
-	public static String winnerRecord(int winner, int maxScore, String[][] records) {
+	//優勝チームのデータを文字列で返す(voidメソッドにして直接表示でもよい)
+//	public static String winnerRecord(int winner, int maxScore, String[][] records) {
+	public static void winnerRecord(int winner, int maxScore, String[][] records) {
 		String result = winner + 1 + " " + maxScore;
 		int win = 0; int draw = 0; int lose = 0;
 		for (int i = 0; i < records.length; i++) {
@@ -85,6 +87,7 @@ public class B_x001 {
 			}
 		}
 		result += " " + win + " " + draw + " " + lose;
-		return result;
+//		return result;
+		System.out.println(result);
 	}
 }
